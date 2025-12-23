@@ -1,0 +1,19 @@
+.holeCard{
+    background-color: rgba(255, 243, 227, 1);
+    width: 568px;
+    height: 340px;
+    padding-left: 24px;
+      position: absolute;
+  top: 48%;
+  right: 10%;
+  padding: 24px;
+  z-index: 10;
+}
+ .f1{
+    font-style: Poppins;
+    font-weight: bold;
+    font-size: 52px;
+    color:rgba(184, 142, 47, 1)
+}
+
+

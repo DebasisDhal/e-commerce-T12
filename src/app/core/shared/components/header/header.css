@@ -1,0 +1,5 @@
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* adjust spacing here */
+}
