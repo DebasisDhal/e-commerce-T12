@@ -2,6 +2,9 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
 
+[Sample Angular eCommerce Project.pdf](https://github.com/user-attachments/files/24331321/Sample.Angular.eCommerce.Project.pdf)
+
+
 ## Development server
 
 To start a local development server, run:
