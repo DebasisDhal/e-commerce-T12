@@ -5,6 +5,8 @@ import { HomePage } from './core/features/home-page/home-page';
 import { Layout } from './core/features/layout/layout';
 import { Login } from './core/features/auth/login/login';
 import { authGuard } from './core/guards/auth-guard';
+import { Products } from './core/features/products/products';
+import { ProductDetails } from './core/shared/components/product-details/product-details';
 
 export const routes: Routes = [
    
@@ -25,6 +27,13 @@ export const routes: Routes = [
             {
                 path:'home',
                 component: HomePage
+            },
+            {
+                path:'products',
+                component: Products
+            },{
+                path:'p-details',
+                component:ProductDetails
             }
         ]
     }

@@ -1,0 +1,81 @@
+<div class="product-container" *ngIf="selectedData$ | async as product">
+
+<div class="breadcrumb mb-4">
+  <a [routerLink]="['/home']">Home</a>&gt;
+  <a
+    [routerLink]="['/products']"
+    [queryParams]="{ category: product.category }"
+  >
+    {{ product.category | titlecase }}
+  </a>
+  &gt;
+  <strong>{{product.title.split(' ')[0]}}</strong>
+</div>
+
+
+  <div class="grid" >
+
+    <!-- LEFT: Image Section -->
+    <div class="col-12 lg:col-7 flex gap-3" >
+
+      <!-- Thumbnails -->
+      <div class="thumbnail-list hidden md:flex flex-column gap-2">
+        <img *ngFor="let img of images"
+             [src]="img"
+             class="thumbnail" />
+      </div>
+
+      <!-- Main Image -->
+      <div class="main-image-wrapper">
+        <img [src]="product.image" class="main-image" />
+      </div>
+
+    </div>
+
+    <!-- RIGHT: Product Details -->
+    <div class="col-12 lg:col-5 product-details">
+
+      <h2 class="product-title">{{product.title}}</h2>
+      <p class="price">Rs. {{product.price}}</p>
+
+      <!-- Rating -->
+      <div class="flex align-items-center gap-2 mb-3">
+        ⭐⭐⭐⭐⭐
+        <span class="text-sm text-gray">{{ product.rating.rate  }} | {{ product.rating.count }} Customer Review</span>
+      </div>
+
+      <p class="description">
+       {{ product.description }}
+      </p>
+
+      <!-- Size -->
+      <div class="mb-3">
+        <p class="label">Size</p>
+        <div class="flex gap-2">
+          <button class="size-btn">L</button>
+          <button class="size-btn">XL</button>
+          <button class="size-btn">XS</button>
+        </div>
+      </div>
+
+      <!-- Color -->
+      <div class="mb-4">
+        <p class="label">Color</p>
+        <div class="flex gap-2">
+          <span class="color-dot purple"></span>
+          <span class="color-dot black"></span>
+          <span class="color-dot gold"></span>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex flex-wrap gap-3">
+        <div class="qty-box">− 1 +</div>
+        <button class="primary-btn">Add To Cart</button>
+        <button class="outline-btn">+ Compare</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+

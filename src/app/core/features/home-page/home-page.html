@@ -25,23 +25,25 @@
 
 <!-- Browse The Range -->
 
-<div class="browseRange mt-10">
+<div class="browseRange p-[3%] ">
    <p class="text-center text-xl font-semibold">
   Browse The Range
 </p>
    <p class="text-center text-sm text-500">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </p>
+<div class="grid justify-content-center mt-5">
 
-    <div class="mb-4 p-8 flex items-center justify-center">
-    <p-card [style]="{ width: '25rem', overflow: 'hidden' }">
-        <ng-template #header>
-            <img alt="Card" class="w-full" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
-        </ng-template>
-        <ng-template #title style="text-align: center;"> Dining </ng-template>
-   
-
-    </p-card>
+  @for( data of pCategories();  track $index){
+      <div class="col-12 sm:col-6 md:col-4 lg:col" [routerLink]="['/products']" [queryParams]="{category:data}">
+          <p-card [style]="{ width: '100%', overflow: 'hidden' }">
+              <ng-template #header>
+                  <img alt="Card" class="w-full" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+              </ng-template>
+              <ng-template #title style="text-align: center;"> {{data}} </ng-template>
+          </p-card>
+        </div>
+      }
 </div>
 </div>
 

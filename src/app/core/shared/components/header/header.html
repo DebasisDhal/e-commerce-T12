@@ -1,17 +1,37 @@
 <div class="card">
     <p-toolbar>
-        <ng-template #start>
-            <img src="./asserts/Meubel House_Logos-05.svg">
-            <img src="./asserts/SkinClinic.svg">
+        <ng-template #start >
+            <a [routerLink]="['/home']" class="row link-reset"
+>
+
+                <img src="./asserts/Meubel House_Logos-05.svg">
+                <img src="./asserts/SkinClinic.svg">
+            </a>
+
 
         </ng-template>
-        <ng-template #center>
-            <p-button label="Home" text plain />
-    <p-button label="Shop" text plain />
-    <p-button label="About" text plain />
-    <p-button label="Contact" text plain />
-           
-        </ng-template>
+        <ng-template #start>
+  <div
+    class="row cursor-pointer"
+    [routerLink]="['/home']"
+  >
+    <img src="./asserts/Meubel House_Logos-05.svg">
+                <img src="./asserts/SkinClinic.svg">
+  </div>
+</ng-template>
+
+<ng-template #center>
+  @for (data of pCategories(); track data) {
+    <p-button
+      [label]="data | titlecase"
+      text
+      plain
+      [routerLink]="['/products']"
+      [queryParams]="{ category: data }"
+    />
+  }
+</ng-template>
+
         <ng-template #end>
             <div class="icon-group">
 

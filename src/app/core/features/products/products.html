@@ -1,1 +1,25 @@
-<p>products works!</p>
+<div class="page-container">
+
+  <div class="grid justify-content-center mt-5" *ngIf="products$ | async as products">
+  
+    @for( data of products;  track $index){
+        <div class="col-12 sm:col-6 md:col-4 lg:col-3" [queryParams]="{id: data.id}"  [routerLink]="['/p-details']">
+            <p-card [style]="{ width: '100%', overflow: 'hidden' }">
+                <ng-template #header>
+                    <img alt="Card" class="w-full h-80"  [src]="data.image" />
+                </ng-template>
+               <ng-template #title>
+    <div class="text-center line-clamp-2">
+      {{ data.title }}
+    </div>
+    <div class="text-center line-clamp-2">
+     Rs. {{data.price}}
+    </div>
+  </ng-template>
+  
+               
+            </p-card>
+          </div>
+        }
+  </div>
+</div>

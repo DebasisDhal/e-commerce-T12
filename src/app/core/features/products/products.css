@@ -1,0 +1,11 @@
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.page-container {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0 1rem;
+}

@@ -3,3 +3,18 @@
   align-items: center;
   gap: 1rem; /* adjust spacing here */
 }
+.link-reset {
+  text-decoration: none;
+  color: inherit;
+  display: flex;        /* keeps row layout */
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.link-reset:focus,
+.link-reset:hover,
+.link-reset:active {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}

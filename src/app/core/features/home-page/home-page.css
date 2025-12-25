@@ -16,4 +16,8 @@
     color:rgba(184, 142, 47, 1)
 }
 
+.category-card {
+  width: 100%;
+  overflow: hidden;
+}
 
